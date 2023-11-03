@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from "react"
+
 import './App.css';
 
+//install quil(npm i react-quill)
+//go to index.js and remove strictmode (the two tags covering app.js) 
 function App() {
+ 
+  //wanted to use quill but shits been deprecated so ....
+  //HTML
+  let data = `<p style="font-size:25px; color:red">This is my Home</p>`;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div dangerouslySetInnerHTML={{__html:data}}></div>
+      {/* jsx */}
+      <p style={{fontSize:25, color:"red"}}>This is my Home</p>
+     
     </div>
   );
 }
